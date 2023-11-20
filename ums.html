@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.M.S</title>
+    <link href="styleums.css" rel="stylesheet">
+</head>
+<body>
+    <div class="abc">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Sign In</button>
+                <button type="button" class="toggle-btn" onclick="SignUp()">Sign Up</button>
+            </div> 
+            <form id="login" class="inputs" onsubmit="redirectToHome(event, 'home.html')">
+                <input type="text" class="int" placeholder="User Id" required>
+                <input type="password" class="int" placeholder="Enter Password" required>
+                <input type="checkbox" class="CB"><span>Remember Password</span>
+                <button type="submit" class="sbt">LOG IN</button>
+            </form> 
+            <form id="SignUp" class="inputs" onsubmit="redirectToHome(event, 'home.html')">
+                <input type="text" class="int" placeholder="User Id" required>
+                <input type="email" class="int" placeholder="Email Id" required>
+                <input type="password" class="int" placeholder="Enter Password" required>
+                <input type="checkbox" class="CB"><span>I agree to the Terms & Conditions</span>
+                <button type="submit" class="sbt">Sign Up</button>
+            </form>
+        </div>    
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("SignUp");
+        var z = document.getElementById("btn");
+
+        function SignUp() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+        function redirectToHome(event, page) {
+            event.preventDefault(); // Prevent form submission
+
+            // Perform any other required actions (e.g., form validation)
+
+            // Redirect to the specified page after a brief delay (3 seconds in this example)
+            setTimeout(function() {
+                window.location.href = page;
+            }, 1000); // Adjust the delay as needed
+        }
+    </script>
+</body>
+</html>

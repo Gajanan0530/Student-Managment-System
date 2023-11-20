@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*, *:after, *:after{
+    box-sizing: border-box;
+}
+
+header{
+    background-color: khaki;
+    text-align: center;
+    padding: 8px;
+    font-size: 30px;
+    color:coral;
+    font-family: serif;
+}
+
+body{
+    background-color:coral;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tabs *{
+    z-index: 2;
+}
+
+.tabs{
+    display: flex;
+    position: relative;
+    background-color:whitesmoke;
+    box-shadow: rgb(0,0,0,0.2) 0px 60px 40px -7px;
+    padding: 0.75rem;
+    border-radius: 99px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 200px;
+    font-size: 1.25;
+    font-weight: 400;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+}
+
+input[id="radio"]:checked + label{
+    color:coral
+}
+
+input[id="radio-1"]:checked ~ .glider{
+    transform: translateX(0);
+}
+
+input[id="radio-2"]:checked ~ .glider{
+    transform: translateX(100%);
+}
+
+input[id="radio-3"]:checked ~ .glider{
+    transform: translateX(200%);
+}
+
+input[id="radio-4"]:checked ~ .glider{
+    transform: translateX(300%);
+}
+
+input[id="radio-5"]:checked ~ .glider{
+    transform: translateX(400%);
+}
+
+.glider{
+    position: absolute;
+    display: flex;
+    height: 54px;
+    width:200px;
+    background-color:khaki;
+    color: honeydew;
+    z-index: 1;
+    border-radius: 99px;
+    transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px){
+    .tabs{
+        transform:scale(0.6);
+
+    }
+}
+
+
+.abc{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.abcd{
+   
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box2{
+    width: 1450px;
+    height: 550px;
+    margin: 6% auto;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, .2);
+    background-color: khaki;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color:coral;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+    text-align: center;
+    overflow: auto;
+}
+
+.form-section {
+    width: 100%;
+    padding: 20px; /* Add padding as needed */
+    box-sizing: border-box;
+}
+
+.forms-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-box {
+    width: 1450px;
+    height: 400px; /* Adjust width and margin as needed */
+    margin: 6% auto; /* Adjust margin as needed */
+    border: 2px solid rgba(255, 255, 255, .2);
+    background-color: khaki;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: coral;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.circle-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px; /* Adjust margin as needed */
+}
+
+.circle {
+    width: calc(50% - 1px); /* Adjust width and margin as needed */
+    margin-bottom: 1px; /* Adjust margin as needed */
+    text-align: center;
+}
+
+.circle h1{
+    margin: 0;
+}
+
+.circle h1 {
+    font-size: 1.5em;
+}
+
+.circle p {
+    font-size: 1em;
+}
+
+.circle::before {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 100px; /* Adjust circle size */
+    height: 100px; /* Adjust circle size */
+    background-color: coral;
+    margin: 0 auto 1px; /* Adjust margin for centering */
+    position: relative;
+}
+
+.bottom-circles {
+    display: flex;
+    justify-content:center;
+}
+
+.table-container {
+    max-height: 300px; /* Set a maximum height for scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}

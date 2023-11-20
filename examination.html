@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Examination Page</title>
+  <link rel="stylesheet" href="examination.css">
+</head>
+<body>
+
+<header>
+  <h1>University Management System</h1>
+
+  <div class="container1">
+    <div class="tabs">
+      <input type="radio" id="radio-1" name="tabs"/>
+      <label class="tab" for="radio-1">Home</label>
+
+      <input type="radio" id="radio-2" name="tabs" />
+      <label class="tab" for="radio-2">Time-Table</label>
+
+      <input type="radio" id="radio-3" name="tabs" checked />
+      <label class="tab" for="radio-3">Examination</label>
+
+      <input type="radio" id="radio-4" name="tabs" />
+      <label class="tab" for="radio-4">Change Password</label>
+
+      <input type="radio" id="radio-5" name="tabs" />
+      <label class="tab" for="radio-5">Log-Out</label>
+
+      <span class="glider"></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <a href="exam_schedule.html" class="box">
+      <h2>Exam Schedule</h2>
+    </a>
+    <a href="exam_results.html" class="box">
+      <h2>Exam Results</h2>
+    </a>
+    <a href="exam_resources.html" class="box">
+      <h2>Exam Resources</h2>
+    </a>
+    <a href="exam_registration.html" class="box">
+      <h2>Exam Registration</h2>
+    </a>
+  </div>
+</main>
+
+<script>
+  const radio1 = document.getElementById('radio-1');
+  const radio2 = document.getElementById('radio-2');
+  const radio3 = document.getElementById('radio-3');
+  const radio4 = document.getElementById('radio-4');
+  const radio5 = document.getElementById('radio-5');
+
+  radio1.addEventListener('change', () => {
+    window.location.href = 'home.html';
+  });
+
+  radio2.addEventListener('change', () => {
+    window.location.href = 'timetable.html';
+  });
+
+  radio3.addEventListener('change', () => {
+    window.location.href = 'examination.html';
+  });
+
+  radio4.addEventListener('change', () => {
+    window.location.href = 'changepassword.html';
+  });
+
+  radio5.addEventListener('change', () => {
+    window.location.href = 'logout.html';
+  });
+</script>
+
+</body>
+</html>
